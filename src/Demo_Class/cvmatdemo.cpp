@@ -3,7 +3,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-void matdemo()
+void cvmatdemo()
 { 
     /*Is it OK to assign cv::Mat_<double> values to cv::Mat_<float> object ?*/	
 	cv::Mat_<double> doubleMat = cv::Mat::zeros(4, 5, CV_64F);

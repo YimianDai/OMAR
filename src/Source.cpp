@@ -19,20 +19,20 @@ int main(int argc, char **argv)
 	/*                                             */
 
 	/*Demos for Attributes and Functions of Classes*/
-	stringdemo();
+	//stringdemo();
 
 	/*Demos for Attributes and Functions of Classes*/
-	cvmatdemo();
+	//cvmatdemo();
 
 	/*                                                    */
 	/*                  Demo_Input_Output                 */
 	/*                                                    */
 	
 	/*Demo for operations of images*/
-	imagedemo();
+	imagedemo_002();
 
 	/*Demo for operations of MATLAB .mat files*/
-	matlabmatdemo();
+	//matlabmatdemo();
 
 	std::system("PAUSE");
 	return 0;

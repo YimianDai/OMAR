@@ -4,8 +4,11 @@
 
 主要是我遇到什么问题了，有些是按照功能划分的，有些是根据每个类型划分的，彼此之间可能会有很多重合和冗余。
 
+目前精力有限，只用 C / C++ 代码演示。
+
 #### 项目架构
 * data: Directory storing the input data.
+* doc: 力争每天一篇，关于 src 代码中的说明。
 * images: Directory storing the input images.
 * outputs: Directory storing the output results.
 * src

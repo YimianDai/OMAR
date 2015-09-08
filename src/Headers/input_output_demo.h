@@ -1,6 +1,6 @@
 /* Demos for file input and output operations */
 
-void imagedemo();
+void imagedemo_002();
 
 void matlabmatdemo();
 

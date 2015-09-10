@@ -36,7 +36,8 @@ int main(int argc, char **argv)
 	/*Demo for operations of MATLAB .mat files*/
 	//matlabmatdemo();
 
-	demo_ocmu_gradient();
+	//demo_ocmu_gradient();
+	demo_ocmu_imclose();
 
 	std::system("PAUSE");
 	return 0;

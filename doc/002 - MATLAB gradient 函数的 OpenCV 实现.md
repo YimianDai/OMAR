@@ -1,3 +1,5 @@
+# MATLAB gradient 函数的 OpenCV 实现
+
 今天，工作上需要用 OpenCV/C++ 实现一下 MATLAB 的 gradient 函数，我们先来看一下 gradient 是怎么工作的，代码和运行结果如下：
 
 ```MATLAB
@@ -77,6 +79,9 @@ void ocmu_gradient(cv::Mat img, cv::Mat_<double> &Gx, cv::Mat_<double> &Gy)
 }
 ```
 
+##### Update List:
+* 2015-09-10:
+    + 完成初稿。
 
 
 

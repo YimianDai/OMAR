@@ -1,4 +1,9 @@
-# 图像的读取、显示和写入
+# 002 - 图像的读取、显示和写入
+
+## To Do List
+* cvSaveImage 保存图像一直失败，为什么？
+* 补充剩余部分；
+* 润色全文。
 
 ## 正文
 
@@ -56,3 +61,4 @@ C: void cvShowImage(const char* name, const CvArr* image)
 
 * 2015-09-08: 
 	+ 完成了文章的主体框架，还欠缺图像写入部分。
+

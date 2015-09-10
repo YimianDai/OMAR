@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Headers\class_demo.h"
 #include "Headers\input_output_demo.h"
+#include "Headers\ocmu_function_demo.h"
+#include "Headers\ocmu_functions.h"
 
 // Please change the project path in your computer here to run successfully
 extern std::string projectPath = \
@@ -29,10 +31,12 @@ int main(int argc, char **argv)
 	/*                                                    */
 	
 	/*Demo for operations of images*/
-	imagedemo_002();
+	//imagedemo_002();
 
 	/*Demo for operations of MATLAB .mat files*/
 	//matlabmatdemo();
+
+	demo_ocmu_gradient();
 
 	std::system("PAUSE");
 	return 0;

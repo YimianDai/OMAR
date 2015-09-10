@@ -49,7 +49,7 @@ void imagedemo_002()
 	cvReleaseImage(&img_GRAYSCALE_IplImage);
 	cvReleaseMat(&img_COLOR_CvMat);
 	cvReleaseMat(&img_GRAYSCALE_CvMat);
-	
+
 	/*Check if the image is readed correctly*/
 	if (!img_COLOR_Mat.data) {
 		std::cout<<"img_COLOR_Mat is not created."<<std::endl;
@@ -65,7 +65,18 @@ void imagedemo_002()
 	}
 
 	/*Write image*/
-	std::string imwritePath = projectPath + "outputs\\imwriteDemo.jpg";
-	cv::imwrite(imwritePath, img_GRAYSCALE_Mat);
+	std::string imwriteMatPath = projectPath + "outputs\\imwriteDemo_Mat.jpg";
+	bool flag_Mat = cv::imwrite(imwriteMatPath, img_GRAYSCALE_Mat);
+	std::cout<<"flag_Mat = "<<flag_Mat<<std::endl;
+
+	std::string tmp_CvMatPath = projectPath + "outputs\\imwriteDemo_CvMat.jpg";
+	const char* imwriteCvMatPath = tmp_CvMatPath.c_str();
+	//int flag_CvMat = cvSaveImage(imwriteCvMatPath, img_GRAYSCALE_CvMat);
+	//std::cout<<"flag_CvMat = "<<flag_CvMat<<std::endl;
+
+	std::string tmp_IplImagePath = projectPath + "outputs\\imwriteDemo_IplImage.jpg";
+	const char* imwriteIplImagePath = tmp_IplImagePath.c_str();
+	//int flag_IplImage = cvSaveImage(imwriteIplImagePath, img_GRAYSCALE_IplImage);
+	//std::cout<<"flag_IplImage = "<<flag_IplImage<<std::endl;
 
 }

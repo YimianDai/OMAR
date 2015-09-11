@@ -1,5 +1,8 @@
 # MATLAB imclose 和 imopen 函数的 OpenCV 实现
 
+本文给出了 MATLAB imclose 和 imopen 函数的两种 OpenCV 实现，一种是自己用腐蚀和膨胀组合，另一种是直接调用 `cv::morphologyEx` 函数。
+
+### 腐蚀和膨胀组合
 今天，工作上需要用 OpenCV/C++ 实现一下 MATLAB 的 imclose 函数，也就是对图像进行闭运算。闭运算其实就是先对图像做一次膨胀再做一次腐蚀，OpenCV 的官方文档 [More Morphology Transformations][More Morphology Transformations] 有个很好的公式：
 
 ```C++
@@ -84,15 +87,31 @@ cv::Mat_<uchar> ocmu_imopen(cv::Mat_<uchar> binImg, cv::Mat_<uchar> element)
     return openImg;
 }
 ```
+
+### `cv::morphologyEx`
+晚上和师弟聊天的时候，师弟告诉我他见过 OpenCV 内可以直接进行开闭运算的函数 `cv::morphologyEx`。除此之外，这个函数还可以进行形态学梯度、TopHat 算子和 Black Hat 算子操作，更加详细的可以戳官方文档 [morphologyEx][morphologyEx]。开闭运算的示例代码如下：
+
+```C++
+    cv::Mat_<uchar> morphCloseImg, morphOpenImg;
+    morphologyEx(binImg, morphCloseImg, cv::MORPH_CLOSE, element);
+    morphologyEx(binImg, morphOpenImg, cv::MORPH_OPEN, element);
+    cv::imshow("morphCloseImg", morphCloseImg);
+    cv::imshow("morphOpenImg", morphOpenImg);
+    cv::waitKey();
+```
+
 ##### Update List:
 
-* 2015-09-11:
+* 2015-09-10:
     + 完成初稿。
+* 2015-09-11:
+    + 增加了 `morphologyEx` 部分。
 
 
 
 [OpenCV-and-CPP-for-MATLAB-Users]: https://github.com/YimianDai/OpenCV-and-CPP-for-MATLAB-Users
 [More Morphology Transformations]: http://docs.opencv.org/doc/tutorials/imgproc/opening_closing_hats/opening_closing_hats.html#closing
+[morphologyEx]: http://docs.opencv.org/modules/imgproc/doc/filtering.html?highlight=cvmorphologyex#morphologyex
 
 
 

@@ -30,10 +30,17 @@ void demo_ocmu_imclose()
 	//cv::imshow("closeImg", closeImg);
 	//cv::waitKey();
 
-	cv::Mat_<uchar> closeImg = ocmu_imclose(binImg, element);
-	cv::imshow("closeImg", closeImg);
+	cv::Mat_<uchar> closeImg = ocmu_imclose(binImg, element);	
 	cv::Mat_<uchar> openImg = ocmu_imopen(binImg, element);
+	cv::imshow("closeImg", closeImg);
 	cv::imshow("openImg", openImg);
+	cv::waitKey();
+
+	cv::Mat_<uchar> morphCloseImg, morphOpenImg;
+	morphologyEx(binImg, morphCloseImg, cv::MORPH_CLOSE, element);
+	morphologyEx(binImg, morphOpenImg, cv::MORPH_OPEN, element);
+	cv::imshow("morphCloseImg", morphCloseImg);
+	cv::imshow("morphOpenImg", morphOpenImg);
 	cv::waitKey();
 }
 

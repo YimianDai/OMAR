@@ -37,8 +37,8 @@ int main(int argc, char **argv)
 	//matlabmatdemo();
 
 	//demo_ocmu_gradient();
-	demo_ocmu_imclose();
-
+	//demo_ocmu_imclose();
+	demo_ocmu_maxconnecteddomain();
 	std::system("PAUSE");
 	return 0;
 }

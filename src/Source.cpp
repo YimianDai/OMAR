@@ -4,6 +4,8 @@
 #include "Headers\input_output_demo.h"
 #include "Headers\ocmu_function_demo.h"
 #include "Headers\ocmu_functions.h"
+#include "Headers\syntax_demo.h"
+#include "Headers\opencvfunctions_demo.h"
 
 // Please change the project path in your computer here to run successfully
 extern std::string projectPath = \
@@ -39,6 +41,8 @@ int main(int argc, char **argv)
 	//demo_ocmu_gradient();
 	//demo_ocmu_imclose();
 	demo_ocmu_maxconnecteddomain();
+	//demo_syntax();
+	//demo_sort_sortIdx();
 	std::system("PAUSE");
 	return 0;
 }

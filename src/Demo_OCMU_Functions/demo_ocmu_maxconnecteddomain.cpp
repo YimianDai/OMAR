@@ -51,8 +51,21 @@ void demo_ocmu_maxconnecteddomain()
 		std::cout<<"Maximum connected region exists."<<std::endl;
 	}
 
+	connectedDomainStruct targetStruct = ocmu_connecteddomain(binImg);
+	cv::Mat_<uchar> targetRegion = targetStruct.targetRegion;
+	//int xBegPos = targetStruct.xBegPos;
+	//int yBegPos = targetStruct.yBegPos;
+	//int xEndPos = targetStruct.xEndPos;
+	//int yEndPos = targetStruct.yEndPos; 
+
+	if (!targetRegion.data) {
+		std::cout<<"Target connected region does not exist."<<std::endl;		
+	} else {
+		std::cout<<"Target connected region exists."<<std::endl;
+	}
 	cv::imshow("all regions", result1) ;  
 	cv::imshow("largest region", result2) ;  
 	cv::imshow("maxRegion by ocmu_maxconnecteddomain", maxRegion) ;  	 
+	cv::imshow("targetRegion by ocmu_connecteddomain", targetRegion) ;  
 	cv::waitKey();  
 }

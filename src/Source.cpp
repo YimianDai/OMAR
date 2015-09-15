@@ -40,9 +40,9 @@ int main(int argc, char **argv)
 
 	//demo_ocmu_gradient();
 	//demo_ocmu_imclose();
-	demo_ocmu_maxconnecteddomain();
+	//demo_ocmu_maxconnecteddomain();
 	//demo_syntax();
-	//demo_sort_sortIdx();
+	demo_sort_sortIdx();
 	std::system("PAUSE");
 	return 0;
 }

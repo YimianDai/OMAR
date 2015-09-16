@@ -43,7 +43,8 @@ int main(int argc, char **argv)
 	//demo_ocmu_maxconnecteddomain();
 	//demo_syntax();
 	//demo_sort_sortIdx();
-	demo_setTo();
+	//demo_setTo();
+	demo_resize();
 	std::system("PAUSE");
 	return 0;
 }
